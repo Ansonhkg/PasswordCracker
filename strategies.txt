@@ -1,0 +1,11 @@
+To generate password guesses, I have 5 filter in my filter class
+
+1) To find of there is EXACT match
+2) Convert all words into universal leet, for example, a=4,e=3,g=6, etc.
+3) Reverse all the words, Example 12345 -> 54321
+4) Capitalize first letter
+5) Concatenate a word in the dictionary with every other word. It's N^2, so if dictionary size is 10, then it will be 10x10 = 100 different possibilities
+6) Concatenate all words from year 1900 to 2016.
+7) Concatenate common number combinations, from 1, to 123456789. For example, apple1, apple12, apple123, .., apple123456789
+8) Double words, for example, "blah" to "blahblah"
+
