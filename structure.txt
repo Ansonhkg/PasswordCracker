@@ -1,0 +1,21 @@
+My dictionary is made up from
+- top 100 passwords
+- numbers
+- famous people
+- common names
+- generic animal names -> dog, cat, cow, pig, etc.
+- sports
+- brands
+- profanity
+- cities
+- countries
+- top 10 movies all time
+- tv shows
+- films
+- fictional characters
+- modern culture
+- famous bands
+- food
+- musicians
+- car manufactures
+- years

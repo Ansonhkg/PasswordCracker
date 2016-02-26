@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.concurrent.*;
 
 public class Filter{
 
@@ -9,12 +10,12 @@ public class Filter{
   }
 
   /*Check if has the exact same value*/
-  public void exact(String currentWord, HashMap<Integer, String> passwords) throws Exception{
+  public void find(String currentWord) throws Exception{
     String hashedWord = hp.getHash(currentWord);
 
-    if(passwords.containsValue(hashedWord)){
+    if(Driver.passwords.containsValue(hashedWord)){
       // String username = hp.getKey(hashedWord, passwords);
-      Integer userKey = hp.getKey(hashedWord, passwords);
+      Integer userKey = hp.getKey(hashedWord, Driver.passwords);
       Driver.add(userKey, currentWord);
     }
   }
@@ -36,8 +37,14 @@ public class Filter{
     return new StringBuilder(word).reverse().toString();
   }
 
+  //Capitalize first letter
   public String capitalize(String word){
     return Character.toUpperCase(word.charAt(0)) + word.substring(1);
+  }
+
+  //Concatenate a word with all other words in the dictionary
+  public String concatenate(String word, String word2){
+    return word + word2;
   }
 
 
